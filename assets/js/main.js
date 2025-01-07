@@ -135,3 +135,13 @@ window.addEventListener("popstate", (event) => {
 // Initial page load
 const initialPage = window.location.hash.replace("#", "") || "home";
 loadPage(initialPage);
+
+// Add Shop Now button listener
+document.addEventListener('click', (event) => {
+    if (event.target.id === 'shopNowBtn') {
+        event.preventDefault();
+        const page = 'shop';
+        loadPage(page);
+        history.pushState({ page }, page, `#${page}`);
+    }
+});

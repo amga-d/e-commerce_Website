@@ -11,7 +11,7 @@ $featureProducets = getFeaturedProducts();
         <h2>Super value deals</h2>
         <h1>On all products</h1>
         <p>Save more with coupons & up to 70% off"!</p>
-        <button>Shop Now</button>
+        <button id="shopNowBtn">Shop Now</button>
     </section>
 
     <section id="feature" class="section-p1">
