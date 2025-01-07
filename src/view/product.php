@@ -33,18 +33,23 @@ function displayStars($rating) {
             <h6>Home / T-Shirt</h6>
             <h4><?php echo htmlspecialchars($main_product['name']); ?></h4>
             <h2><?php echo htmlspecialchars($main_product['price']); ?>Rp</h2>
-            <select>
-                <option>Select Size</option>
-                <option>XL</option>
-                <option>XXL</option>
-                <option>Small</option>
-                <option>Large</option>
+
+            <form action="/src/controllers/productCont.php" method="POST">
+            <select name="size" required>
+                <option value="">Select Size</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                <option value="Small">Small</option>
+                <option value="Large">Large</option>
             </select>
+            <input type="hidden" name="action" value="addToCart">
+            <input type="hidden" name ="product_id" value="<?php echo htmlspecialchars($main_product['product_id']); ?>">
             <div class="quantity-container">
                 <label for="quantity">Quantity (<?php echo htmlspecialchars($main_product['stock_quantity']); ?> available):</label>
-                <input type="number" id="quantity" value="1" min="1" max="<?php echo htmlspecialchars($main_product['stock_quantity']); ?>">
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="<?php echo htmlspecialchars($main_product['stock_quantity']); ?>">
             </div>
-            <button class="normal">Add To Cart</button>
+            <button type="submit" class="normal">Add To Cart</button>
+            </form>
             <h4>Product Details</h4>
             <span><?php echo htmlspecialchars($main_product['description']); ?></span>
             <div class="star">

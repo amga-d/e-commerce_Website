@@ -34,6 +34,9 @@ function returnToLogin(){
     exit();
 }
 
+function getUserId(){
+    return $_SESSION['user_id'] ;
+}
 function isAdmin(){
     if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
         return true;
