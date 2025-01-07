@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../controllers/home_cont.php";
+require_once __DIR__ . "/../controllers/homeCont.php";
 
 $featureProducets = getFeaturedProducts();
 

@@ -13,7 +13,7 @@ function getFeaturedProducts(){
             FROM
                 products
                     
-            LIMIT 5;';
+            LIMIT 4;';
 
     $conn = getDbConn();
     $stmt = $conn->prepare($query);

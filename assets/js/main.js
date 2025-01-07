@@ -119,7 +119,7 @@ function getPageFromURL() {
 function handleNavigation(page) {
     if (typeof page === "object" && page.type === "product") {
         loadProductPage(
-            `src/controllers/product_cont.php?action=view&product_id=${page.id}`,
+            `src/controllers/productCont.php?action=view&product_id=${page.id}`,
             page.id
         );
     } else if (pages[page]) {
@@ -152,7 +152,7 @@ document.addEventListener("click", (event) => {
             : event.target.closest(".product-link");
         const productId = productLink.dataset.productId;
         loadProductPage(
-            `src/controllers/product_cont.php?action=view&product_id=${productId}`,
+            `src/controllers/productCont.php?action=view&product_id=${productId}`,
             productId
         );
     }
