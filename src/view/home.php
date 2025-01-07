@@ -63,7 +63,7 @@ $featureProducets = getFeaturedProducts();
                         </div>
                         <h4 class="price"><?= htmlspecialchars($product['price']) ?>Rp</h4>
                     </div>
-                    <a href="#"><i class="bi bi-cart3"></i></a>
+                    <a href="#" class="product-link" data-product-id="<?= htmlspecialchars($product['product_id'])?>"><i class="bi bi-cart3"></i></a>
                 </div>
 
             <?php endforeach; ?>
