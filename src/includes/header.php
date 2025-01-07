@@ -16,21 +16,23 @@
             <ul id="navbar">
                 <div class="mobile-nav-logo">
                     <img class="ver-logo" src="/assets/img/Ver-Logo.png" alt="" />
-                    <a  id="close"><i class="bi bi-x"></i> </a>
+                    <a id="close"><i class="bi bi-x"></i> </a>
                     <hr>
                 </div>
-                <li><a href="index.html" class="home">Home</a></li>
-                <li><a href="shop.html" class="shop">Shop</a></li>
-                <li><a href="blog.html" class="blog">Blog</a></li>
-                <li><a href="about.html" class="about">About</a></li>
-                <li><a href="contact.html" class="contact">Contact</a></li>
-                <li class="cart">
-                    <a href="cart.html"><i class="bi bi-bag"></i></a>
-                </li>
+                <li><a class="home">Home</a></li>
+                <li><a class="shop">Shop</a></li>
+                <li><a class="blog">Blog</a></li>
+                <li><a class="about">About</a></li>
+                <li><a class="contact">Contact</a></li>
+                <li><a id="cart" class="cart"> <i class="bi bi-bag"></i></a></li>
+            <li><a href="/src/controllers/auth/logout.php" class="logout">Logout</a></li>
             </ul>
         </div>
         <div id="mobile">
-            <a href="cart.html"><i class="bi bi-bag"></i></a>
+            <a id="mobile-cart" class="cart">
+                <i class="bi bi-bag"></i>
+            </a>
             <i id="bar" class="bi bi-list"></i>
         </div>
     </header>
+    <!--  -->

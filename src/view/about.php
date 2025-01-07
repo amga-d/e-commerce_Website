@@ -13,20 +13,17 @@
     <section id="about-head" class="section-p1">
         <img src="/assets/img/about/a6.jpg" alt="">
         <div>
-            <h2>Who We Are?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis auteirure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <abbr title="">Create stunning images with as much or as little control as you like thanks to a choice of Basic and Creative modes.</abbr>
+        <h2>Who We Are?</h2>
+            <p>Welcome to Amgad Store, your number one source for all things fashion. We're dedicated to providing you the very best of clothing, with an emphasis on quality, customer service, and uniqueness.</p>
+            <p>Founded in 2021 by Amgad, Amgad Store has come a long way from its beginnings in a home office. When Amgad first started out, his passion for eco-friendly fashion drove him to start his own business.</p>
+            <p>We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.</p>
+            <abbr title="Amgad Store">Amgad Store</abbr>
             <br><br>
-            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Create stunning images with as much or as little control as you like thanks to a choice of Basic and Creative modes.</marquee>
-        </div>
+            <marquee bgcolor="#ccc" loop="-0.5" scrollamount="10" width="100%">Thank you for visiting Amgad Store. We hope to see you again soon!</marquee>
+            </div>        
     </section>
 
-    <section id="about-app" class="section-p1">
-        <h1>Download Our <a href="#">App</a></h1>
-        <div class="video">
-            <video autoplay muted loop src="/assets/img/about/1.mp4"></video>
-        </div>
-    </section>
+
 
     <section id="feature" class="section-p1">
         <div class="fe-box">

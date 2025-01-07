@@ -18,24 +18,24 @@
             <div>
                 <li>
                     <i class="bi bi-map"></i>
-                    <p>56 Glassford Street Glasgow G1 1UL New York</p>
-                </li>
-                <li>
-                    <i class="bi bi-envelope"></i>
-                    <p>contact@example.com</p>
-                </li>
-                <li>
-                    <i class="bi bi-telephone"></i>
-                    <p>contact@example.com</p>
-                </li>
-                <li>
-                    <i class="bi bi-clock"></i>
-                    <p>Monday to Saturday: 9.00am to 16.pm</p>
-                </li>
+                    <p>Jl. Kaliurang KM 14.5, Sleman, Yogyakarta, Indonesia</p>
+                    </li>
+                    <li>
+                        <i class="bi bi-envelope"></i>
+                        <p>amgad.abdulrazzaq@gmail.com</p>
+                    </li>
+                    <li>
+                        <i class="bi bi-telephone"></i>
+                        <p>+62 274 123 456</p>
+                    </li>
+                    <li>
+                        <i class="bi bi-clock"></i>
+                        <p>Monday to Saturday: 9.00am to 6.00pm</p>
+                    </li>
             </div>
         </div>
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2289.222050380181!2d-4.253417484069014!3d55.85980798058185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488846a0c63bffff%3A0x5e8144580721fbbb!2s56%20Glassford%20St%2C%20Glasgow%20G1%201UL%2C%20UK!5e0!3m2!1sen!2s!4v1625671341665!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=439&amp;height=400&amp;hl=en&amp;q=universitas islam indonesia&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://sprunkiphasez.com/">Sprunki Phase</a></div><style>.mapouter{position:relative;text-align:right;width:439px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:439px;height:400px;}.gmap_iframe {width:439px!important;height:400px!important;}</style>
         </div>
     </section>
 
@@ -45,7 +45,7 @@
             <h2>We love to hear from you</h2>
             <input type="text" name="name" placeholder="Your Name">
             <input type="email" name="email" placeholder="E-mail">
-            <input type="text" name="subject" placeholder="Subject">
+            
             <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
             <button class="normal">Submit</button>
         </form>
@@ -53,15 +53,15 @@
         <div class="people">
             <div>
                 <img src="/assets/img/people/1.png" alt="">
-                <p><span>John Doe</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
+                <p><span>Amgad Aref</span> Senior Marketing Manager <br> Phone: + 62 123 000 77 88 <br> Email: amgad@gmail.com</p>
             </div>
             <div>
                 <img src="/assets/img/people/2.png" alt="">
-                <p><span>William Smith</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
+                <p><span>Mohanad Hamid</span> Senior Marketing Manager <br> Phone: + 62 123 000 77 88 <br> Email: mohand@gmai.com</p>
             </div>
             <div>
                 <img src="/assets/img/people/3.png" alt="">
-                <p><span>Emma Stone</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
+                <p><span>Emma Stone</span> Senior Marketing Manager <br> Phone: + 60 123 000 77 88 <br> Email: emma@gmai.com</p>
             </div>
         </div>
     </section>

@@ -25,7 +25,7 @@
                     </div>
                     <h4 class="price">78Rp</h4>
                 </div>
-                <a href="#"><i class="bi bi-cart3"></i></a>
+                <a href="#" class="cart"><i class="bi bi-cart3"></i></a>
             </div>
             <div class="prod">
                 <img src="/assets/img/products/f2.jpg" alt="Product 2">
@@ -41,7 +41,7 @@
                     </div>
                     <h4 class="price">65Rp</h4>
                 </div>
-                <a href="#"><i class="bi bi-cart3"></i></a>
+                <a href="#" class="cart"><i class="bi bi-cart3"></i></a>
             </div>
             <div class="prod">
                 <img src="/assets/img/products/f3.jpg" alt="Product 3">
@@ -57,7 +57,7 @@
                     </div>
                     <h4 class="price">55Rp</h4>
                 </div>
-                <a href="#"><i class="bi bi-cart3"></i></a>
+                <a href="#" class="cart"><i class="bi bi-cart3"></i></a>
             </div>
             <div class="prod">
                 <img src="/assets/img/products/f4.jpg" alt="Product 4">
@@ -73,7 +73,7 @@
                     </div>
                     <h4 class="price">82Rp</h4>
                 </div>
-                <a href="#"><i class="bi bi-cart3"></i></a>
+                <a href="#" class="cart"><i class="bi bi-cart3"></i></a>
             </div>
             <!-- Add more product divs as needed -->
         </div>

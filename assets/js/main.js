@@ -27,8 +27,8 @@ const navbar = document.getElementById("navbar");
 const bar = document.getElementById("bar");
 const close = document.getElementById("close");
 const content = document.getElementById("content");
-
-
+const cart = document.getElementById("cart");
+const mobile_cart = document.getElementById("mobile-cart");
 
 // Page content mapping
 const pages = {
@@ -37,23 +37,22 @@ const pages = {
     blog: "/src/view/blog.php",
     about: "/src/view/about.php",
     contact: "/src/view/contact.php",
+    cart: "/src/view/cart.php",
 };
 
 // Function to load the content and update the active class
 async function loadPage(page) {
     // Update content
     if (pages[page]) {
-        try{
-        
+        try {
             // Fetch the HTML file
             const response = await fetch(pages[page]);
-            if (!response.ok) throw new Error('Page not found');
+            if (!response.ok) throw new Error("Page not found");
             const html = await response.text();
-        
+
             // Update the content area
             content.innerHTML = html;
-        }
-        catch(error){
+        } catch (error) {
             content.innerHTML = `<h1>Error loading the page`;
         }
         // Update the active class
@@ -63,13 +62,12 @@ async function loadPage(page) {
                 link.classList.add("active");
             }
         });
-    
+
         // Update browser history
         history.replaceState({ page }, page, `#${page}`);
     } else {
         content.innerHTML = "<h1>Page Not Found</h1>";
     }
-
 }
 
 // Mobile menu toggle
@@ -87,12 +85,36 @@ if (close) {
 // Navigation click handling
 navbar.addEventListener("click", (event) => {
     if (event.target.tagName === "A") {
-        event.preventDefault();
-        const page = event.target.className.split(" ")[0]; // Get the first class name
-        if (pages[page]) {
-            loadPage(page);
-            history.pushState({ page }, page, `#${page}`); // Push new state into history
+        if (!(event.target.className == "logout") ){
+            event.preventDefault();
+            const page = event.target.className.split(" ")[0]; // Get the first class name
+            if (pages[page]) {
+                loadPage(page);
+                history.pushState({ page }, page, `#${page}`); // Push new state into history
+            }
         }
+    }
+});
+
+cart.addEventListener("click", (event) => {
+    event.preventDefault();
+    // Check if clicked element is the icon or the parent
+    const clickedElement = event.target.closest("#cart") || event.target;
+    const page = clickedElement.className.split(" ")[0];
+    if (pages[page]) {
+        loadPage(page);
+        history.pushState({ page }, page, `#${page}`);
+    }
+});
+
+mobile_cart.addEventListener("click", (event) => {
+    event.preventDefault();
+    // Check if clicked element is the icon or the parent
+    const clickedElement = event.target.closest("#mobile-cart") || event.target;
+    const page = clickedElement.className.split(" ")[0];
+    if (pages[page]) {
+        loadPage(page);
+        history.pushState({ page }, page, `#${page}`);
     }
 });
 

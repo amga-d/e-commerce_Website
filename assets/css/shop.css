@@ -78,6 +78,30 @@
     color: #088178;
 }
 
+/* Update the cart icon styling in the shop page */
+#product1 .prod .cart {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    text-align: center;
+}
+
+#product1 .prod a {
+    text-decoration: none;
+}
+
+#product1 .prod i {
+    font-size: 16px;
+}
+
 #product1 .prod .cart {
     width: 40px;
     height: 40px;
@@ -126,4 +150,3 @@
         width: 100%;
     }
 }
-
