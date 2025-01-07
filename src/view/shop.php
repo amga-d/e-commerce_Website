@@ -1,5 +1,8 @@
 <?php
 require_once __DIR__ . "/../controllers/shopCont.php";
+
+$products = getProducts();
+
 ?>
 
 <link rel="stylesheet" href="/assets/css/shop.css">
@@ -12,7 +15,44 @@ require_once __DIR__ . "/../controllers/shopCont.php";
 
     <section id="product1" class="section-p1">
         <div class="prod-container">
-            <div class="prod">
+        <?php foreach ($products as $product): ?>
+                <div class="prod">
+                    <img src="<?= htmlspecialchars($product['image_url']) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
+                    <div class="des">
+                        <h3 class="product-name"><?= htmlspecialchars($product['name']) ?></h3>
+                        <p class="product-description"><?= htmlspecialchars(substr($product['description'], 0, 100)) ?>...</p>
+                        <div class="stars">
+                            <?php $stars = (htmlspecialchars($product['rate']));?>
+                            <?php for ($i = 0 ; $i < $stars ; $i++):?>
+                            <i class="bi bi-star-fill"></i>
+                            <?php endfor;?>
+                            <?php for ($i = 0 ; $i < 5-$stars ; $i++):?>
+                            <i class="bi bi-star"></i>
+                            <?php endfor;?>
+                        </div>
+                        <h4 class="price"><?= htmlspecialchars($product['price']) ?>Rp</h4>
+                    </div>
+                    <a href="#" class="product-link cart" data-product-id="<?= htmlspecialchars($product['product_id'])?>"><i class="bi bi-cart3"></i></a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </section>
+    
+    <section id="dicount-offer" class="section-m1">
+        <h6>SPECIAL OFFER</h6>
+        <h1>End Year</h1>
+        <h2>
+            Up to <span class="dis-precentage">30% Off</span> - All t-Shirt
+            & Accessories
+        </h2>
+        <button>Explore More</button>
+    </section>
+
+    
+
+</body>
+
+<!-- <div class="prod">
                 <img src="/assets/img/products/f1.jpg" alt="Product 1">
                 <div class="des">
                     <h5 class="product-name">Cartoon Astronaut T-Shirts</h5>
@@ -75,20 +115,4 @@ require_once __DIR__ . "/../controllers/shopCont.php";
                     <h4 class="price">82Rp</h4>
                 </div>
                 <a href="#" class="cart"><i class="bi bi-cart3"></i></a>
-            </div>
-            <!-- Add more product divs as needed -->
-        </div>
-    </section>
-    
-    <section id="dicount-offer" class="section-m1">
-        <h6>SPECIAL OFFER</h6>
-        <h1>End Year</h1>
-        <h2>
-            Up to <span class="dis-precentage">30% Off</span> - All t-Shirt
-            & Accessories
-        </h2>
-        <button>Explore More</button>
-    </section>
-
-
-</body>
+            </div> -->
