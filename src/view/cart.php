@@ -1,4 +1,7 @@
+<?php 
+require_once __DIR__ . "/../controllers/cartCont.php";
 
+?>
 <link rel="stylesheet" href="/assets/css/cart.css">
 <body>
 
