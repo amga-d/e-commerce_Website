@@ -1,42 +1,5 @@
 <?php
-// Simulating product data retrieval
-$product = [
-    'id' => 1,
-    'name' => 'Cartoon Astronaut T-Shirts',
-    'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    'price' => 78,
-    'image' => '/assets/img/products/f1.jpg',
-    'rating' => 5
-];
-
-// Simulating related products retrieval
-$relatedProducts = [
-    [
-        'id' => 2,
-        'name' => 'Floral Print Shirt',
-        'description' => 'Elegant floral print shirt for a stylish look.',
-        'price' => 65,
-        'image' => '/assets/img/products/f2.jpg',
-        'rating' => 4
-    ],
-    [
-        'id' => 3,
-        'name' => 'Casual White Shirt',
-        'description' => 'Comfortable white shirt for everyday wear.',
-        'price' => 55,
-        'image' => '/assets/img/products/f3.jpg',
-        'rating' => 4
-    ],
-    [
-        'id' => 4,
-        'name' => 'Floral Embroidery Shirt',
-        'description' => 'Beautiful embroidered shirt for a unique style.',
-        'price' => 82,
-        'image' => '/assets/img/products/f4.jpg',
-        'rating' => 5
-    ]
-    
-];
+$main_product = $product;
 
 function displayStars($rating) {
     $output = '';
@@ -53,7 +16,7 @@ function displayStars($rating) {
 
 
 <head>
-    <title><?php echo htmlspecialchars($product['name']); ?> - Amgad Store</title>
+    <title><?php echo htmlspecialchars($main_product['name']); ?> - Amgad Store</title>
     <link rel="stylesheet" href="/assets/css/product.css">
 </head>
 <body>
@@ -64,12 +27,12 @@ function displayStars($rating) {
 
     <section id="product-details" class="section-p1">
         <div class="single-pro-image">
-            <img src="<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>" id="MainImg">
+            <img src="<?php echo htmlspecialchars($main_product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>" id="MainImg">
         </div>
         <div class="single-pro-details">
             <h6>Home / T-Shirt</h6>
-            <h4><?php echo htmlspecialchars($product['name']); ?></h4>
-            <h2><?php echo htmlspecialchars($product['price']); ?>Rp</h2>
+            <h4><?php echo htmlspecialchars($main_product['name']); ?></h4>
+            <h2><?php echo htmlspecialchars($main_product['price']); ?>Rp</h2>
             <select>
                 <option>Select Size</option>
                 <option>XL</option>
@@ -77,12 +40,15 @@ function displayStars($rating) {
                 <option>Small</option>
                 <option>Large</option>
             </select>
-            <input type="number" value="1" min="1">
+            <div class="quantity-container">
+                <label for="quantity">Quantity (<?php echo htmlspecialchars($main_product['stock_quantity']); ?> available):</label>
+                <input type="number" id="quantity" value="1" min="1" max="<?php echo htmlspecialchars($main_product['stock_quantity']); ?>">
+            </div>
             <button class="normal">Add To Cart</button>
             <h4>Product Details</h4>
-            <span><?php echo htmlspecialchars($product['description']); ?></span>
+            <span><?php echo htmlspecialchars($main_product['description']); ?></span>
             <div class="star">
-                <?php echo displayStars($product['rating']); ?>
+                <?php echo displayStars($main_product['rate']); ?>
             </div>
         </div>
     </section>
@@ -93,16 +59,17 @@ function displayStars($rating) {
         <div class="pro-container">
             <?php foreach ($relatedProducts as $relatedProduct): ?>
             <div class="pro">
-                <img src="<?php echo htmlspecialchars($relatedProduct['image']); ?>" alt="<?php echo htmlspecialchars($relatedProduct['name']); ?>">
+                <img src="<?php echo htmlspecialchars($relatedProduct['image_url']); ?>" alt="<?php echo htmlspecialchars($relatedProduct['name']); ?>">
                 <div class="des">
                     <span>adidas</span>
                     <h5><?php echo htmlspecialchars($relatedProduct['name']); ?></h5>
                     <div class="star">
-                        <?php echo displayStars($relatedProduct['rating']); ?>
+                        <?php echo displayStars($relatedProduct['rate']); ?>
                     </div>
                     <h4><?php echo htmlspecialchars($relatedProduct['price']); ?>Rp</h4>
                 </div>
-                <a href="#"><i class="bi bi-cart3 cart"></i></a>
+                <a href="#" class="product-link cart" data-product-id="<?= htmlspecialchars($relatedProduct['product_id'])?>"><i class="bi bi-cart3"></i></a>
+
             </div>
             <?php endforeach; ?>
         </div>
