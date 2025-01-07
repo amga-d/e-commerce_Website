@@ -25,7 +25,7 @@
                 <li><a class="about">About</a></li>
                 <li><a class="contact">Contact</a></li>
                 <li><a id="cart" class="cart"> <i class="bi bi-bag"></i></a></li>
-            <li><a href="/src/controllers/auth/logout.php" class="logout">Logout</a></li>
+            <li><a href="/src/controllers/auth/logout.php" class="logout"><i class="bi bi-box-arrow-right"></i></a></li>
             </ul>
         </div>
         <div id="mobile">
