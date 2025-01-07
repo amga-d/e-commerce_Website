@@ -11,7 +11,7 @@
 
 <body>
     <header id="header">
-        <a class="logo" href="#"><img src="/assets/img/logo.png" alt="" /></a>
+        <a class="home logo" id="logo" href="#"><img src="/assets/img/logo.png" alt="" /></a>
         <div>
             <ul id="navbar">
                 <div class="mobile-nav-logo">

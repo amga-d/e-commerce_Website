@@ -29,6 +29,7 @@ const close = document.getElementById("close");
 const content = document.getElementById("content");
 const cart = document.getElementById("cart");
 const mobile_cart = document.getElementById("mobile-cart");
+const logo = document.getElementById("logo");
 
 // Page content mapping
 const pages = {
@@ -105,6 +106,13 @@ cart.addEventListener("click", (event) => {
         loadPage(page);
         history.pushState({ page }, page, `#${page}`);
     }
+});
+
+logo.addEventListener("click", (event) => {
+    event.preventDefault();
+    const page = "home";
+    loadPage(page);
+    history.pushState({ page }, page, `#${page}`);
 });
 
 mobile_cart.addEventListener("click", (event) => {
