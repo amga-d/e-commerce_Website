@@ -17,13 +17,32 @@
 // function isPostRequest() {
 //     return $_SERVER['REQUEST_METHOD'] === 'POST';
 // }
-session_start();
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 function isLogedIn(){
-    if (!isset($_SESSION['user_id'])){
-        echo "register";
+    if (isset($_SESSION['user_id'])){
+        return true;
     }
     else {
+        return false;
+    }
+}
+function returnToLogin(){
+    header("Location: /src/view/auth/login.php");
+    exit();
+}
+
+function getUserId(){
+    return $_SESSION['user_id'] ;
+}
+function isAdmin(){
+    if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
         return true;
+    }
+    else{
+        return false;
     }
 }
 ?>

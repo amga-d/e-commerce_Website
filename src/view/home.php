@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../controllers/home_cont.php";
+require_once __DIR__ . "/../controllers/homeCont.php";
 
 $featureProducets = getFeaturedProducts();
 
@@ -11,7 +11,7 @@ $featureProducets = getFeaturedProducts();
         <h2>Super value deals</h2>
         <h1>On all products</h1>
         <p>Save more with coupons & up to 70% off"!</p>
-        <button>Shop Now</button>
+        <button id="shopNowBtn">Shop Now</button>
     </section>
 
     <section id="feature" class="section-p1">
@@ -63,7 +63,7 @@ $featureProducets = getFeaturedProducts();
                         </div>
                         <h4 class="price"><?= htmlspecialchars($product['price']) ?>Rp</h4>
                     </div>
-                    <a href="#"><i class="bi bi-cart3"></i></a>
+                    <a href="#" class="product-link" data-product-id="<?= htmlspecialchars($product['product_id'])?>"><i class="bi bi-cart3"></i></a>
                 </div>
 
             <?php endforeach; ?>
