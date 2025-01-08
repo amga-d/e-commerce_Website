@@ -137,11 +137,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Add Shop Now button listener
 document.addEventListener("click", (event) => {
-    if (event.target.id === "shopNowBtn") {
+    if (event.target.id === "contShopBtn") {
         event.preventDefault();
         const page = "shop";
         loadPage(page);
-        history.pushState({ page }, page, `#${page}`);
+        history.pushState({ page }, page, `${page}`);
+    }
+    else if (event.target.id === "shopNowBtn") {
+        event.preventDefault();
+        const page = "shop";
+        loadPage(page);
+        history.pushState({ page }, page, `${page}`);
     } else if (
         event.target.classList.contains("product-link") ||
         event.target.closest(".product-link")
